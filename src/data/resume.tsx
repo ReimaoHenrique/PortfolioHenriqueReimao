@@ -27,8 +27,8 @@ export const DATA = {
     //{ href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "hello@example.com",
-    tel: "+123456789",
+    email: "Henrique.reimao@outlook.com",
+    tel: "+55071992076895",
     social: {
       GitHub: {
         name: "GitHub",
@@ -90,11 +90,19 @@ export const DATA = {
   ],
   education: [
     {
-      school: "Hackersdobem",
+      school: "Hackersdobem/Senai",
       href: "https://hackersdobem.org.br/",
-      degree: "s3",
+      degree: "Redes/cybersecurity",
       logoUrl: "logo/Hdb.png",
       start: "2024",
+      end: "2025",
+    },
+    {
+      school: "IBM/Coursera",
+      href: "coursera.org/",
+      degree: "DevOps",
+      logoUrl: "logo/IBM-Logo.png",
+      start: "2025",
       end: "2025",
     },
   ],
