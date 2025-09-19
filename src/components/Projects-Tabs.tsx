@@ -59,7 +59,7 @@ export function ProjectsTabs() {
                     description={project.description}
                     dates={project.dates}
                     tags={project.technologies}
-                    image={project.image}
+                    image={(project as any).image}
                     video={(project as any).video}
                     links={project.links}
                   />
@@ -73,12 +73,7 @@ export function ProjectsTabs() {
           <BlurFade delay={BLUR_FADE_DELAY * 2}>
             <Card>
               <CardTitle className="mt-10 mb-10 flex items-center gap-2">
-                <Image
-                  src="/logo/rust.svg"
-                  alt="Rust"
-                  width={22}
-                  height={22}
-                />
+                <Image src="/logo/rust.svg" alt="Rust" width={22} height={22} />
                 Rust Projects
               </CardTitle>
               {DATA.projects
@@ -91,7 +86,7 @@ export function ProjectsTabs() {
                     description={project.description}
                     dates={project.dates}
                     tags={project.technologies}
-                    image={project.image}
+                    image={(project as any).image}
                     video={(project as any).video}
                     links={project.links}
                   />
@@ -123,7 +118,7 @@ export function ProjectsTabs() {
                     description={project.description}
                     dates={project.dates}
                     tags={project.technologies}
-                    image={project.image}
+                    image={(project as any).image}
                     video={(project as any).video}
                     links={project.links}
                   />

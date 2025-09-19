@@ -145,7 +145,7 @@ export default function Page() {
                   description={project.description}
                   dates={project.dates}
                   tags={project.technologies}
-                  image={project.image}
+                  image={(project as any).image}
                   video={(project as any).video}
                   links={project.links}
                 />
