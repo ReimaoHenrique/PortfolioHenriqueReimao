@@ -24,8 +24,16 @@ export const metadata: Metadata = {
     description: DATA.description,
     url: DATA.url,
     siteName: `${DATA.name}`,
-    locale: "en_US",
+    locale: "pt-BR",
     type: "website",
+    images: [
+      {
+        url: `${DATA.url}${DATA.avatarUrl}`,
+        width: 1200,
+        height: 630,
+        alt: `${DATA.name} - Software Developer`,
+      },
+    ],
   },
   robots: {
     index: true,
@@ -40,7 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: `${DATA.name}`,
+    description: DATA.description,
     card: "summary_large_image",
+    images: [`${DATA.url}${DATA.avatarUrl}`],
   },
   verification: {
     google: "",
@@ -54,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en-US" suppressHydrationWarning>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",

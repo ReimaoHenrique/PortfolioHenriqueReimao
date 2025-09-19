@@ -49,19 +49,21 @@ export function ProjectsTabs() {
                 />
                 Node.js Projects
               </CardTitle>
-              {DATA.projects.map((project, id) => (
-                <ProjectCard
-                  href={project.href}
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  dates={project.dates}
-                  tags={project.technologies}
-                  image={project.image}
-                  video={project.video}
-                  links={project.links}
-                />
-              ))}
+              {DATA.projects
+                .filter((project) => (project as any).stack === "Node.js")
+                .map((project, id) => (
+                  <ProjectCard
+                    href={project.href}
+                    key={project.title}
+                    title={project.title}
+                    description={project.description}
+                    dates={project.dates}
+                    tags={project.technologies}
+                    image={project.image}
+                    video={(project as any).video}
+                    links={project.links}
+                  />
+                ))}
             </Card>
           </BlurFade>
         </TabsContent>
@@ -70,25 +72,30 @@ export function ProjectsTabs() {
         <TabsContent value="rust">
           <BlurFade delay={BLUR_FADE_DELAY * 2}>
             <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Image
-                    src="/logo/rust.svg"
-                    alt="Rust"
-                    width={22}
-                    height={22}
+              <CardTitle className="mt-10 mb-10 flex items-center gap-2">
+                <Image
+                  src="/logo/rust.svg"
+                  alt="Rust"
+                  width={22}
+                  height={22}
+                />
+                Rust Projects
+              </CardTitle>
+              {DATA.projects
+                .filter((project) => (project as any).stack === "Rust")
+                .map((project, id) => (
+                  <ProjectCard
+                    href={project.href}
+                    key={project.title}
+                    title={project.title}
+                    description={project.description}
+                    dates={project.dates}
+                    tags={project.technologies}
+                    image={project.image}
+                    video={(project as any).video}
+                    links={project.links}
                   />
-                  Rust Projects
-                </CardTitle>
-                <CardDescription>Onde o código roda na bala 🦀</CardDescription>
-              </CardHeader>
-              <CardContent className="grid gap-3">
-                <ul className="list-disc ml-4 space-y-1">
-                  <li>CLI para profiling de cache</li>
-                  <li>Gerador de JWT em Rust</li>
-                  <li>Serviço web com Axum</li>
-                </ul>
-              </CardContent>
+                ))}
             </Card>
           </BlurFade>
         </TabsContent>

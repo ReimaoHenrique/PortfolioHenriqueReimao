@@ -24,7 +24,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    //{ href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "hello@example.com",
@@ -80,7 +80,7 @@ export const DATA = {
       href: "https://www.qrpets.info",
       badges: [],
       location: "Remote",
-      title: "Bitcoin Protocol Engineer",
+      title: "Saúde Pet Digital",
       logoUrl: "/logo/QrPetesLogo.svg",
       start: "May 2025",
       end: "Present",
@@ -100,32 +100,24 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Chat Collect",
+      title: "Rust Studio",
+      stack: "Rust",
       href: "https://chatcollect.com",
-      dates: "Jan 2024 - Feb 2024",
+      dates: "Jan 2025 - Present",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
-      ],
+        "A modern Rust database client with a web UI. Cargo subcommand, cross-platform, connects via env vars, permite gerenciar bancos de dados via interface gráfica. ",
+      technologies: ["Rust", "Axum", "Tokio", "SQLx"],
       links: [
         {
-          type: "Website",
-          href: "https://chatcollect.com",
-          icon: <Icons.globe className="size-3" />,
+          type: "open source project",
+          href: "https://docs.rs/crate/rust-studio/latest",
+          icon: <Icons.rust className="size-3" />,
         },
       ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      image: "/rust-studio-painel.png",
+      //video:
+      //"https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
     },
   ],
   hackathons: [
