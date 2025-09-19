@@ -104,27 +104,30 @@ export function ProjectsTabs() {
         <TabsContent value="k8s">
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Image
-                    src="/logo/k8s.svg"
-                    alt="Kubernetes"
-                    width={22}
-                    height={22}
+              <CardTitle className="mt-10 mb-10 flex items-center gap-2">
+                <Image
+                  src="/logo/k8s.svg"
+                  alt="Kubernetes"
+                  width={22}
+                  height={22}
+                />
+                K8s Projects
+              </CardTitle>
+              {DATA.projects
+                .filter((project) => (project as any).stack === "K8s")
+                .map((project, id) => (
+                  <ProjectCard
+                    href={project.href}
+                    key={project.title}
+                    title={project.title}
+                    description={project.description}
+                    dates={project.dates}
+                    tags={project.technologies}
+                    image={project.image}
+                    video={(project as any).video}
+                    links={project.links}
                   />
-                  Kubernetes Projects
-                </CardTitle>
-                <CardDescription>
-                  Orquestrando containers como maestro 🐳
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="grid gap-3">
-                <ul className="list-disc ml-4 space-y-1">
-                  <li>Cluster local com Minikube + Podman</li>
-                  <li>Pipeline CI/CD com deploy automático</li>
-                  <li>Observabilidade com Prometheus + Grafana</li>
-                </ul>
-              </CardContent>
+                ))}
             </Card>
           </BlurFade>
         </TabsContent>

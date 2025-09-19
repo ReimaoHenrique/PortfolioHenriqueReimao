@@ -110,11 +110,11 @@ export const DATA = {
     {
       title: "Rust Studio",
       stack: "Rust",
-      href: "https://chatcollect.com",
+      href: "https://docs.rs/crate/rust-studio/latest",
       dates: "Jan 2025 - Present",
       active: true,
       description:
-        "A modern Rust database client with a web UI. Cargo subcommand, cross-platform, connects via env vars, permite gerenciar bancos de dados via interface gráfica. ",
+        "A modern Rust database client with a web UI. Cargo subcommand, cross-platform, connects via env vars, permite gerenciar bancos de dados via interface gráfica.",
       technologies: ["Rust", "Axum", "Tokio", "SQLx"],
       links: [
         {
@@ -124,8 +124,57 @@ export const DATA = {
         },
       ],
       image: "/rust-studio-painel.png",
-      //video:
-      //"https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+    },
+    {
+      title: "API MercadoLivre",
+      stack: "Node.js",
+      href: "https://github.com/ReimaoHenrique/api_mercadolivre",
+      dates: "2024",
+      active: false,
+      description:
+        "API desenvolvida com NestJS para integração com MercadoLivre, oferecendo funcionalidades de e-commerce e gerenciamento de produtos.",
+      technologies: ["Node.js", "NestJS", "TypeScript", "REST API"],
+      links: [
+        {
+          type: "source",
+          href: "https://github.com/ReimaoHenrique/api_mercadolivre",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "Ingressa",
+      stack: "Node.js",
+      href: "https://github.com/ReimaoHenrique/Ingressa",
+      dates: "2024",
+      active: false,
+      description:
+        "Plataforma de venda de ingressos desenvolvida com Next.js, oferecendo uma experiência moderna e responsiva para eventos.",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+      links: [
+        {
+          type: "source",
+          href: "https://github.com/ReimaoHenrique/Ingressa",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "Kubernetes Infrastructure",
+      stack: "K8s",
+      href: "https://github.com/ReimaoHenrique/infra-k8s",
+      dates: "2024",
+      active: false,
+      description:
+        "Configurações e manifests para infraestrutura Kubernetes, demonstrando práticas de DevOps e orquestração de containers.",
+      technologies: ["Kubernetes", "Docker", "YAML", "DevOps"],
+      links: [
+        {
+          type: "source",
+          href: "https://github.com/ReimaoHenrique/infra-k8s",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
     },
   ],
   hackathons: [
