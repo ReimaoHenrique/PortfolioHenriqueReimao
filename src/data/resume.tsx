@@ -4,7 +4,7 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "Henrique Reimão",
   initials: "HR",
-  url: "https://henrique.reimao.vercel.app",
+  url: "https://henriquereimao.vercel.app",
   location: "Salvador, Ba",
   description:
     "Software Developer turned entrepreneur. Passionate about building solutions that matter and helping people grow. Always exploring new ideas, especially in Rust, Linux, and cybersecurity.",

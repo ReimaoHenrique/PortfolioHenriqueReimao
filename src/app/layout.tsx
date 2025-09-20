@@ -26,15 +26,7 @@ export const metadata: Metadata = {
     siteName: `${DATA.name}`,
     locale: "pt-BR",
     type: "website",
-    images: [
-      {
-        url: `${DATA.url}${DATA.avatarUrl}`,
-        width: 800,
-        height: 600,
-        alt: `${DATA.name} - Software Developer`,
-        type: "image/jpeg",
-      },
-    ],
+    images: `${DATA.url}${DATA.avatarUrl}`,
   },
   robots: {
     index: true,
@@ -51,14 +43,7 @@ export const metadata: Metadata = {
     title: `${DATA.name}`,
     description: DATA.description,
     card: "summary_large_image",
-    images: [`${DATA.url}${DATA.avatarUrl}`],
-  },
-  other: {
-    "og:image": `${DATA.url}${DATA.avatarUrl}`,
-    "og:image:width": "800",
-    "og:image:height": "600",
-    "og:image:type": "image/jpeg",
-    "og:image:alt": `${DATA.name} - Software Developer`,
+    images: `${DATA.url}${DATA.avatarUrl}`,
   },
   verification: {
     google: "",
