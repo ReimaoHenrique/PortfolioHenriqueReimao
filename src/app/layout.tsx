@@ -26,7 +26,14 @@ export const metadata: Metadata = {
     siteName: `${DATA.name}`,
     locale: "pt-BR",
     type: "website",
-    images: `${DATA.url}${DATA.avatarUrl}`,
+    images: [
+      {
+        url: `${DATA.avatarUrl}`,
+        width: 959,
+        height: 1280,
+        alt: "Henrique Reimão",
+      },
+    ],
   },
   robots: {
     index: true,
