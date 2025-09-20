@@ -20,17 +20,28 @@ export const metadata: Metadata = {
   },
   description: DATA.description,
   openGraph: {
-    title: `${DATA.name}`,
+    title: DATA.name,
     description: DATA.description,
     url: DATA.url,
-    siteName: `${DATA.name}`,
+    siteName: DATA.name,
     locale: "pt-BR",
     type: "website",
     images: [
       {
-        url: `${DATA.avatarUrl}`,
+        url: `${DATA.url}${DATA.avatarUrl}`,
         width: 959,
         height: 1280,
+        alt: "Henrique Reimão",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: DATA.name,
+    description: DATA.description,
+    images: [
+      {
+        url: `${DATA.url}${DATA.avatarUrl}`,
         alt: "Henrique Reimão",
       },
     ],
@@ -46,12 +57,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  twitter: {
-    title: `${DATA.name}`,
-    description: DATA.description,
-    card: "summary_large_image",
-    images: `${DATA.url}${DATA.avatarUrl}`,
-  },
   verification: {
     google: "",
     yandex: "",
@@ -64,7 +69,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-US" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
