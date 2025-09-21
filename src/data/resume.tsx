@@ -1,5 +1,6 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
+import { Content } from "next/font/google";
 
 export const DATA = {
   name: "Henrique Reimão",
@@ -193,6 +194,33 @@ export const DATA = {
           href: "https://github.com/henriquereimao/qr-pets-hackathon",
         },
       ],
+    },
+  ],
+  PrinciplesCode: [
+    {
+      title: "Microservices",
+      content:
+        "I use them when they make sense. They help with scalability and module independence, but I avoid adding unnecessary complexity.",
+    },
+    {
+      title: "Domain-Driven Design (DDD)",
+      content:
+        "I focus on reflecting the business domain language in the code. This makes collaboration easier and builds sustainable software in the long run.",
+    },
+    {
+      title: "Model-View-Controller (MVC)",
+      content:
+        "I organize responsibilities clearly, which makes maintenance and testing easier in projects that need simplicity.",
+    },
+    {
+      title: "SOLID",
+      content:
+        "These principles guide my design decisions. They keep the code decoupled, flexible, and ready to grow without turning into chaos.",
+    },
+    {
+      title: "Clean Architecture",
+      content:
+        "I usually avoid it. While well-structured, it can add unnecessary complexity and make the software too expensive to maintain.",
     },
   ],
 } as const;

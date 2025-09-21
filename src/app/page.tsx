@@ -9,6 +9,12 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { ProjectsTabs } from "@/components/Projects-Tabs";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -153,6 +159,26 @@ export default function Page() {
             ))}
           </div>
         </div>
+        <section>
+          <BlurFade delay={BLUR_FADE_DELAY * 13}>
+            <div>
+              <h2 className="text-3xl font-bold text-center">
+                The Principles Behind My Code
+              </h2>
+              <Accordion type="single" collapsible className="w-full">
+                {DATA.PrinciplesCode.map((principle, idx) => (
+                  <AccordionItem key={principle.title} value={`item-${idx}`}>
+                    <AccordionTrigger>{principle.title}</AccordionTrigger>
+                    <AccordionContent className="flex flex-col gap-4 text-balance">
+                      <p>{principle.content}</p>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </BlurFade>
+        </section>
+
         <section id="project-tabs">
           <div className="space-y-12 w-full py-12">
             <h2 className="text-3xl font-bold text-center">Projects Stacks</h2>
@@ -160,6 +186,7 @@ export default function Page() {
           </div>
         </section>
       </section>
+
       <section id="hackathons">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
